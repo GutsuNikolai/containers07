@@ -20,7 +20,7 @@ services:
   frontend:
     image: nginx:1.19
     volumes:
-      - ./mounts/site:/var/www/html/part2
+      - ./mounts/site:/var/www/html
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     ports:
       - "80:80"
@@ -30,7 +30,7 @@ services:
   backend:
     image: php:7.4-fpm
     volumes:
-      - ./mounts/site:/var/www/html/part2
+      - ./mounts/site:/var/www/html
     networks:
       - internal
     env_file:
