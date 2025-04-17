@@ -30,7 +30,7 @@ services:
   backend:
     image: php:7.4-fpm
     volumes:
-      - ./mounts/site:/var/www/html
+      - ./mounts/site:/var/www/html/part2
     networks:
       - internal
     env_file:
